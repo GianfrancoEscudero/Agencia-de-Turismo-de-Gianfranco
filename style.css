@@ -1,0 +1,448 @@
+* {
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to bottom, #042356, #1E51A8);
+    ;
+}
+
+header {
+    background-image: url(imagenes/fondo\ del\ header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+    font-size: 15px;
+    color: white;
+    z-index: 100;
+    position: relative;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: flex-start;
+    /* Alinea los elementos al inicio */
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* Permite que los elementos se ajusten en varias líneas */
+}
+
+header .logo-h1 {
+    display: flex;
+    align-items: center;
+    /* Alinea verticalmente el logo y el h1 */
+}
+
+header .title-nav {
+    display: flex;
+    flex-direction: column;
+    /* Organiza el h1 y la navegación verticalmente */
+    margin-left: 10px;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    /* Ajusta el color y la opacidad según tus necesidades */
+    z-index: 1;
+}
+
+.left {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    width: 250px;
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-100%);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+}
+
+.left ul {
+    flex: 1;
+    background: #1c1c1c;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.left a {
+    text-decoration: none;
+    display: block;
+    color: #c7c7c7;
+    border-left: 5px solid transparent;
+    transition: all 500ms ease;
+}
+
+.left a:hover {
+    border-left: 5px solid #c7c7c7;
+    background: #1f1f1f;
+}
+
+.left.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+header img,
+h1,
+nav.up a,
+.clock,.user {
+    position: relative;
+    z-index: 1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+nav.up {
+    margin-top: 10px;
+    /* Añade margen superior para separar de h1 */
+}
+
+nav.up a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.1s ease;
+}
+
+nav.up a:hover{
+    color: #74C0FC;
+}
+main {
+    display: flex;
+    flex: 1;
+    background: linear-gradient(to bottom, #042356, #1E51A8);
+    position: relative;
+}
+
+.paquetes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    flex: 1;
+    padding: 20px;
+
+}
+
+.paquetes article {
+    background-color: #e4e4e4;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 15px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+    position: relative; /* Asegura que los artículos tengan un contexto de posicionamiento relativo */
+    transition: transform 0.3s ease; /* Agrega una transición suave al transform */
+}
+
+.paquetes article h2 {
+    color: #083072;
+}
+
+.paquetes article P {
+    color: #1E51A8;
+}
+
+.paquetes article img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.paquetes article:hover {
+    box-shadow: 0 0.5rem 0.9rem rgba(0, 0, 0, 0.9);
+    transform: translateY(-50px); /* Aplica una transformación hacia arriba al pasar el mouse */
+}
+
+footer {
+    background-color: #042356;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    padding: 10px 0;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+@media (max-width: 600px) {
+    .paquetes {
+        grid-template-columns: 1fr;
+    }
+
+    .paquetes article {
+        margin-bottom: 10px;
+    }
+}
+
+aside.pp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: linear-gradient(to right, #042356, #74C0FC);
+}
+
+aside .uno {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+aside .paginas {
+    display: flex;
+    justify-content: flex-end;
+    flex: 0;
+}
+
+.ante {
+    display: flex;
+    justify-content: flex-start;
+    flex: 0;
+}
+
+
+.equis {
+    font-size: 15px;
+    /* Tamaño del icono */
+    cursor: pointer;
+    background: none;
+    /* Fondo transparente */
+    border: none;
+    /* Sin borde */
+    color: #fff;
+    /* Color del icono */
+    outline: none;
+    /* Elimina el contorno al hacer clic */
+    position: absolute;
+    /* Posicionamiento absoluto para alineación */
+    top: 20px;
+    /* Alineación superior */
+    right: 10px;
+    /* Alineación derecha */
+    display: none;
+    /* Inicialmente oculto */
+}
+
+
+
+.left.show .equis {
+    display: block;
+    /* Mostrar el botón X cuando el menú está visible */
+}
+
+.filtro {
+    color: #c7c7c7;
+
+}
+.filtro-p{
+    color: #c7c7c7;
+}
+.filtro-p:hover{
+    border-left: 5px solid #c7c7c7;
+    background: #1f1f1f;
+}
+
+details summary {
+    list-style: none;
+    cursor: pointer;
+}
+
+details ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    padding-left: 20px;
+}
+
+details ul li {
+    margin-bottom: 5px;
+}
+
+.derechos {
+    display: inline-block;
+    margin: 0;
+    text-align: center;
+}
+
+.clock {
+    position: absolute;
+    /* Cambia a absoluto */
+    top: 10px;
+    /* Ajusta según sea necesario */
+    right: 10px;
+    /* Ajusta según sea necesario */
+    display: inline-flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 2px solid #ccc;
+    border-radius: 5%;
+    padding: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+
+}
+
+#time {
+    font-weight: bold;
+    display: block;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+#fecha {
+    margin-top: 2px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+.logo {
+    float: left;
+    margin: 0;
+    width: 120px;
+    height: 120px;
+}
+
+.icon {
+    font-size: 25px;
+    /* Tamaño del icono */
+    cursor: pointer;
+    margin: 10px;
+    border: none;
+    /* Elimina el borde del botón */
+    background: none;
+    /* Fondo transparente */
+    color: #74C0FC;
+    /* Color del icono */
+    outline: none;
+    /* Elimina el contorno al hacer clic */
+    display: flex;
+    /* Usamos flexbox para centrar verticalmente */
+    justify-content: center;
+    /* Centramos horizontalmente */
+    height: 0;
+
+}
+
+.icon:hover {
+    opacity: 0.7;
+    /* Efecto de opacidad al pasar el mouse */
+}
+
+.Agencia {
+    display: inline-block;
+    margin: 0;
+}
+.user-container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.user {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+   display: flex;
+   
+    padding: 10px;
+   
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    width: 100px; /* Ajusta el ancho al tamaño deseado */
+}
+
+.user p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+.user p i {
+    margin-right: 5px; /* Ajusta el margen entre el ícono y el texto */
+}
+.user-a{
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    transition: all 0.1s ease;
+}
+.user-a:hover{
+color: #74C0FC;
+}
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .clock, .user {
+        position: static;
+        margin: 10px 0;
+    }
+
+    .user {
+        justify-content: center;
+    }
+}
+.derechos{
+    margin: 0;
+    text-align: center;
+    flex: 1;
+}
+.instagram {
+    margin-right: 20px;
+}
+
+
+.insta i {
+    font-size: 1.5rem;
+    
+}
+.insta i:hover{
+    color: #74C0FC;
+    cursor:pointer;
+    font-style: bold;
+    
+}
+.insta a{
+    text-decoration: none;
+    color: inherit;
+}
+.github{
+    font-size: 1.5rem;
+}
+.git{
+    margin-right: 20px;
+}
+.github:hover{
+    color: #74C0FC;
+    cursor:pointer;
+    font-style: bold;
+
+}
+.github a{
+    text-decoration: none;
+    color: inherit;
+}

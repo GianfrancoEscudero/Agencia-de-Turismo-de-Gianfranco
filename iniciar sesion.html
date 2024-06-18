@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Agencia de Turismo por el mundo</title>
+    <link href="vendedores.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" type="image/jpg" href="imagenes/logo.png">
+    <script src="https://kit.fontawesome.com/d7f2fe840a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo-h1">
+            <a href="index.html"><img class="logo" src="imagenes/logo.png"></a>
+            <div class="title-nav">
+                <h1 class="Agencia">Agencia de Turismo</h1>
+                <nav class="up">
+                    <a href="vendedores.html">Vendedores</a>
+                    <a href="sucursales.html">Sucursales</a>
+                </nav>
+            </div>
+        </div>
+        <div class="clock">
+            <div id="time"></div>
+            <div id="fecha"></div>
+        </div>
+
+    </header>
+    <main>
+        <section class="vendedores">
+            <form action="" method="POST" id="formulario">
+                <h1 class="one">Inicio</h1>
+                <div class="inputbox">
+                    <ion-icon name="mail-outline"></ion-icon>
+                    <input type="email" id="email" >
+                    <label for="">Usuario</label>
+                </div>
+                <div class="inputbox">
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                    <input type="password" id="password" >
+                    <label for="">Contraseña</label>
+                </div>
+                <div class="forget">
+                    <label for=""><input type="checkbox">Recordar</label>
+                    <a href="#">Olvidé la contraseña</a>
+                </div>
+                <button type="submit" class="form">Iniciar</button>
+                <p class="warnings" id="warnings"></p>
+                <div class="register">
+                    <p>No tengo una cuenta <a href="#">Registrate</a></p>
+                </div>
+            </form>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p class="derechos">APP WEB CREADA POR GIANFRANCO ESCUDERO-2024</p>
+        <div class="instagram">
+            <P class="insta"><a href="https://www.instagram.com/gi4nnnnnn/" target="_blank"><i class="fa-brands fa-instagram"></i></a></P>
+        </div>
+        <div class="git">
+            <p class="github"><a href="https://github.com/GianfrancoEscudero" target="_blank"><i class="fa-brands fa-github"></i></a></p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

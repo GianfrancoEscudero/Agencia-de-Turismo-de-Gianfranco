@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Agencia de Turismo por el mundo</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" type="image/jpg" href="imagenes/logo.png">
+    <script src="https://kit.fontawesome.com/d7f2fe840a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo-h1">
+            <img class="logo" src="imagenes/logo.png">
+            <div class="title-nav">
+                <h1 class="Agencia">Agencia de Turismo</h1>
+                <nav class="up">
+                    <a href="vendedores.html">Vendedores</a>
+                    <a href="sucursales.html">Sucursales</a>
+                </nav>
+            </div>
+        </div>
+        <div class="clock">
+            <div id="time"></div>
+            <div id="fecha"></div>
+        </div>
+        <div class="user-container">
+            <div class="user">
+                <p><a class="user-a" href="iniciar sesion.html"><i class="fa-regular fa-user"></i></a>Mi Cuenta</p>
+            </div>
+        </div>
+    </header>
+    <main>
+
+        <button class="icon" onclick="toggleMenu()"><i class="fa-solid fa-bars fa-lg"
+                style="color: #74C0FC;"></i></button>
+
+        <nav class="left">
+            <button class="equis" onclick="toggleMenu()"><i class="fa-solid fa-x"></i></button>
+            <ul>
+                <p class="filtro">Filtrar por:</p>
+
+                <details>
+                    <summary class="filtro-p">Países</summary>
+                    <ul>
+                        <li><a href="#" onclick="filtrarPorPais('todos')">Todos</a></li>
+                        <li><a href="#" onclick="filtrarPorPais('argentina')">Argentina</a></li>
+                        <li><a href="#" onclick="filtrarPorPais('brasil')">Brasil</a></li>
+                        <li><a href="#" onclick="filtrarPorPais('rep-dominicana')">Republica Dominicana</a></li>
+                        <li><a href="#" onclick="filtrarPorPais('mexico')">México</a></li>
+                        <li><a href="#" onclick="filtrarPorPais('ecuador')">Ecuador</a></li>
+                        <li><a href="#" onclick="filtrarPorPais('uruguay')">Uruguay</a></li>
+                        <!-- Añade más países aquí -->
+                    </ul>
+                </details>
+                <p><a href="#">Precios</a></p>
+            </ul>
+        </nav>
+
+        <div class="paquetes">
+            <article class="argentina">
+                <img src="imagenes/merlo.jpg">
+                <h2>Merlo</h2>
+                <p>PAQUETE CON BUS MERLO</p>
+            </article>
+            <article class="argentina">
+                <img src="imagenes/san bernardo.jpg">
+                <h2>San Bernardo</h2>
+                <p>TURISMO SAN BERNARDO</p>
+            </article>
+            <article class="rep-dominicana">
+                <img src="imagenes/punta cana.jpg">
+                <h2>Punta Cana</h2>
+                <p>PAQUETE POR PUNTA CANA</p>
+            </article>
+            <article class="mexico">
+                <img src="imagenes/méxico.jpg">
+                <h2>México</h2>
+                <p>PAQUETE COMPLETO</p>
+            </article>
+            <article class="argentina">
+                <img src="imagenes/iguazu.jpg">
+                <h2>De iguazú a ushuaia</h2>
+                <p>RECORRIDO COMPLETO</p>
+            </article>
+            <article class="mexico">
+                <img src="imagenes/cancun.jpg">
+                <h2>Cancún</h2>
+                <p>IMPERDIBLE OFERTA</p>
+            </article>
+            <article class="argentina">
+                <img src="imagenes/paquetes_de_viajes_a-_buenos-aires_bariloche.jpg">
+                <h2>Bariloche-Buenos Aires</h2>
+                <P>VIAJES DESDE BARILOCHE HASTA BUENOS AIRES</P>
+            </article>
+            <article class="brasil">
+                <img src="imagenes/RIO.jpg">
+                <h2>Rio de Janeiro</h2>
+                <p>PROMOCIÓN BRASIL-RIO DE JANEIRO</p>
+            </article>
+            <article class="ecuador">
+                <img src="imagenes/ecuador.jpg.crdownload">
+                <h2>Ecuador</h2>
+                <p>VIAJE POR TODO ECUADOR</p>
+            </article>
+            <article class="argentina">
+                <img src="imagenes/carlos paz.jpg">
+                <h2>Carlos Paz</h2>
+                <p>UNO DE LOS PAQUETES MAS PEDIDOS</p>
+            </article>
+            <article class="ecuador">
+                <img src="imagenes/QUITO.jpg">
+                <h2>Quito</h2>
+                <p>CONOZCA LA FAMOSA "MITAD DEL MUNDO</p>
+            </article>
+            <article class="brasil">
+                <img src="imagenes/FLOR.jpg">
+                <h2>Florianópolis</h2>
+                <p>UN LUGAR HERMOSO AL SUR DE BRASIL</p>
+            </article>
+            <article class="uruguay">
+                <img src="imagenes/uruguay.jpg">
+                <h2>Uruguay</h2>
+                <p>CONOCE PUNTA DEL ESTE</p>
+            </article>
+            <article class="uruguay">
+                <img src="imagenes/montevideo.jpg">
+                <h2>Uruguay</h2>
+                <p>CONOCE MONTEVIDEO</p>
+            </article>
+            <article class="argentina">
+                <img src="imagenes/sanjuan.jpg">
+                <h2>San Juan</h2>
+                <p>RECORRE HERMOSOS PAISAJES DE SAN JUAN</p>
+            </article>
+            <article class="argentina">
+                <img src="imagenes/mendoza.jpg">
+                <h2>Mendoza</h2>
+                <p>CONOCE MENDOZA</p>
+            </article>
+        </div>
+
+    </main>
+    <aside class="pp">
+        <div class="uno">
+            <p class="num">1</p>
+        </div>
+        <div class="paginas">
+            <a href="pagina 2.html" class="sig">Siguiente Página</a>
+        </div>
+    </aside>
+    <footer>
+        <p class="derechos">APP WEB CREADA POR GIANFRANCO ESCUDERO-2024</p>
+        <div class="instagram">
+            <P class="insta"><a href="https://www.instagram.com/gi4nnnnnn/" target="_blank"><i class="fa-brands fa-instagram"></i></a></P>
+        </div>
+        <div class="git">
+            <p class="github"><a href="https://github.com/GianfrancoEscudero" target="_blank"><i class="fa-brands fa-github"></i></a></p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
